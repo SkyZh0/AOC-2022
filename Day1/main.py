@@ -11,15 +11,8 @@ for i in tolist:
         final.append(temp)
         temp = []
 
-sums = list()
-for l in final:
-    sums.append(sum(l))
+sums = [sum(i) for i in final]
     
-maxi1 = max(sums)
-sums.remove(maxi1)
-maxi2 = max(sums)
-sums.remove(maxi2)
-maxi3 = max(sums)
-
-print(maxi1,maxi2,maxi3)
-print(maxi1+maxi2+maxi3)
+maxs = sorted(sums, reverse=True)[:3]
+print('PART-1: ', maxs[0])
+print('PART-2: ', sum(maxs))
