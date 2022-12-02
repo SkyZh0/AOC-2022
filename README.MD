@@ -4,4 +4,5 @@
 <h3>Days: </h3>
 <ul>
     <li><a href="Day1/">Day1</a></li>
+    <li><a href="Day2/">Day2</a></li>
 </ul>
