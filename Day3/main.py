@@ -13,8 +13,7 @@ for compart in bags:
 common = (''.join(common)).split(',')
 for item in common:
     finalcommon.append(''.join(set(item)))       
-low, up, lowa, upa = [i for i in range(1,27)], [i for i in range(27,53)], [chr(i) for i in range(97,123)], [chr(i) for i in range(65,91)]
-sum = 0
+low, up, lowa, upa, sum= [i for i in range(1,27)], [i for i in range(27,53)], [chr(i) for i in range(97,123)], [chr(i) for i in range(65,91)], 0
 for item in finalcommon:
     for char in item:
         if char.isupper():
@@ -24,7 +23,7 @@ for item in finalcommon:
 print('PART-1: ', sum)
 #PART-2
 groups = [[data[i],data[i+1],data[i+2]] for i in range(0,len(data)-2, 3)]
-badge, finalbadge = [], []
+badge, finalbadge, sum = [], [], 0
 for group in groups:
     badge.append(',')
     for char in group[0]:
@@ -33,7 +32,6 @@ for group in groups:
 badge = (''.join(badge)).split(',')
 for item in badge:
     finalbadge.append(''.join(set(item)))
-sum = 0
 for badge in finalbadge:
     if badge.isupper():
         sum += up[upa.index(badge)]
