@@ -7,5 +7,5 @@
     <li><a href="Day2/">Day2</a></li>
     <li><a href="Day3/">Day3</a></li>
     <li><a href="Day4/">Day4</a></li>
-    <li><a href="Day5/">Day5 - outdated</a></li>
+    <li><a href="Day5/">Day5</a></li>
 </ul>
