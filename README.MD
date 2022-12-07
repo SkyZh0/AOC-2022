@@ -9,4 +9,5 @@
     <li><a href="Day4/">Day4</a></li>
     <li><a href="Day5/">Day5</a></li>
     <li><a href="Day6/">Day6 - Long live to copilot</a></li>
+    <li><a href="Day7/">Day7</a></li>
 </ul>
