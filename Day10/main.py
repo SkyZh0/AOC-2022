@@ -1,3 +1,4 @@
+import support 
 #INPUT HANDLING
 with open('Day10/input.txt') as file:
     data = file.read().split('\n')
@@ -22,6 +23,29 @@ for line in data:
             tosub = int(sline[1])
             y = x - tosub
             signal.append((cycle-1)*y)
-print(sum(signal))
+print('PART_1: ',sum(signal))
             
+#PART-2 HARDER
+pixels = set()
+x = 1
+stn, st = 0, 'noop'
+lines = iter(data)
+
+for i in range(1,241):
+    if stn == 0:
+        st = next(lines)
+        if st == 'noop':
+            stn = 1
+        elif st.startswith('addx'):
+            stn = 2
+    stn -= 1
+
+    if x-1 <= ((i-1)%40) <= x+1:
+        pixels.add(((i-1)%40, (i-1)//40))
     
+    if stn == 0:
+        if st.startswith('addx'):
+            addx, num = st.split(' ')
+            x += int(num)
+            
+print('PART2: \n', support.format_coords_hash(pixels).replace(' ','.'))
