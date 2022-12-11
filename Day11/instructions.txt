@@ -212,6 +212,8 @@ Figure out which monkeys to chase by counting how many items they inspect over 2
 
 
 
+
+
 --- Part Two ---
 You're worried you might not ever get your items back. So worried, in fact, that your relief that a monkey's inspection didn't damage an item no longer causes your worry level to be divided by three.
 
