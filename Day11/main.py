@@ -1,6 +1,7 @@
 #IMPORT SEC
 import typing
 import functools
+import math
 
 #INPUT HANDLING
 with open('Day11/input.txt') as file:
@@ -53,5 +54,34 @@ for _ in range(20):
                 monkeyz[monkey.iffalse].items.append(item)
         monkey.items.clear()
 rd.sort()
-
 print('PART-1: ', rd[-1]*rd[-2])
+
+#PART-2
+monkeyz = []
+for elt in monkeys:
+    lines = elt.split('\n')
+    starter = [int(s) for s in lines[1].split(': ')[1].split(', ')]
+    if 'old * old' in lines[2]:
+        fonc = square
+    elif ' + ' in lines[2]:
+        fonc = functools.partial(add, b=int(lines[2].split()[-1])) 
+    elif ' * ' in lines[2]:
+        fonc = functools.partial(multi, b=int(lines[2].split()[-1]))
+    modulo = int(lines[3].split(' ')[-1])
+    iftrue = int(lines[4].split(' ')[-1])
+    iffalse = int(lines[5].split(' ')[-1])
+    monkeyz.append(Monkey(starter, fonc, modulo, iftrue, iffalse))
+
+rd = [0] * len(monkeyz)
+for _ in range(10000):
+    for i, monkey in enumerate(monkeyz):
+        for item in monkey.items:
+            rd[i] += 1
+            item = monkey.fonc(item)
+            if item % monkey.modulo == 0:
+                monkeyz[monkey.iftrue].items.append(item)
+            else:
+                monkeyz[monkey.iffalse].items
+        monkey.items.clear()
+rd.sort()
+print('PART-2: ', rd[-1]*rd[-2])#15310845153
