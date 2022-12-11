@@ -51,7 +51,7 @@ for _ in range(20):
                 monkeyz[monkey.iftrue].items.append(item)
             else:
                 monkeyz[monkey.iffalse].items.append(item)
-    monkey.items.clear()
+        monkey.items.clear()
 rd.sort()
 
-print('PART-1: ', seen[-1]*seen[-2])
+print('PART-1: ', rd[-1]*rd[-2])
