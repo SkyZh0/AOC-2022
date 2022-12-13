@@ -1,6 +1,7 @@
 #IMPORT SEC
 import itertools
 import ast
+import functools
 
 #INPUT HANDLING
 with open('Day13/input.txt') as file:
@@ -34,6 +35,10 @@ for i, stack in enumerate(data.split('\n\n'),1):
     l1, l2 = ast.literal_eval(sl1), ast.literal_eval(sl2)
     if comparator(l1, l2) <= 0:
         lastval += i
-print(lastval)
+print('PART-1: ',lastval)
 
 #PART-2
+data = data.replace('\n\n', '\n')
+lists = [ast.literal_eval(line) for line in data.split('\n')]
+lists.extend(([[2]],[[6]]))
+lists.sort(key=functools.cmp_to_key(comparator))
