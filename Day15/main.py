@@ -1,6 +1,5 @@
 #IMPORT SEC
 import re
-import support 
 from typing import NamedTuple
 
 #INPUT HANDLING
@@ -32,11 +31,11 @@ for line in data:
     sensor = Sensor(
         int(match[1]),int(match[2]),int(match[3]),int(match[4])
     )
-    beacs.add(sensor)
+    beacs.add((sensor.beacx, sensor.beacy))
     dist = sensor.distCalc
     rght = dist - abs(y - sensor.y)
     for x in range(sensor.x - rght, sensor.x + rght + 1):
-        coords.add((x, sensor.y))
+        coords.add((x, y))
 print('PART-1: ', len(coords-beacs))
 
 #PART-2
