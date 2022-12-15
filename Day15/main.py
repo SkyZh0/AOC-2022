@@ -1,6 +1,11 @@
 #IMPORT SEC
 import re
 from typing import NamedTuple
+from typing import Any
+from z3 import Optimize
+from z3 import Int
+from z3 import If
+from z3 import sat
 
 #INPUT HANDLING
 with open('Day15/input.txt') as file:
@@ -19,9 +24,15 @@ class Sensor(NamedTuple):
     beacx: int 
     beacy: int 
     
+    def dist(self,x: int,y: int) -> int:
+        return abs(self.x-x) + abs(self.y-y)
+    
     @property
     def distCalc(self) -> int:
         return abs(self.x - self.beacx) + abs(self.y - self.beacy)
+
+def absz(expression: Any) -> If:
+    return If(expression >= 0, expression, -expression)
 
 #PART-1
 beacs, coords = set(), set()
@@ -39,4 +50,25 @@ for line in data:
 print('PART-1: ', len(coords-beacs))
 
 #PART-2
+param = 4_000_000
+opt = Optimize()
+X = Int('X')
+Y = Int('Y')
+o.add(0 <= X)
+o.add(0 <= Y)
+o.add(X <= param)
+o.add(Y <= param)
+for line in data:
+    match = regex.match(line)
+    sensor = Sensor(
+        int(math[1]), 
+        int(math[2]), 
+        int(math[3]), 
+        int(math[4])    
+        )
+    o.add((absz(sensor.x - X) + absz(sensor.y - Y)) > sensor.distCalc)
+result = o.model()
+print(result[X].as_long() * param + result[Y].as_long())
 
+
+                    
