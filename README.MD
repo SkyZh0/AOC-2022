@@ -19,5 +19,5 @@
     <li><a href="Day14/">Day14</a></li>
     <li><a href="Day15/">Day15 - !Warning : High RAM usage</a></li>
     <li><a href="Day16/">Day16 + Full Commented version of PART-1 by OpenAI</a></li>
-    <li><a href="Day17/">Day17</a></li>
+    <li><a href="Day17/">Day17 - Only PART-1</a></li>
 </ul>
