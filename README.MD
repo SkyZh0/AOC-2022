@@ -21,4 +21,5 @@
     <li><a href="Day16/">Day16 + Full Commented version of PART-1 by OpenAI</a></li>
     <li><a href="Day17/">Day17 - Only PART-1</a></li>
     <li><a href="Day18/">Day18 - Only PART-1</a></li>
+    <li><a href="Day19/">Day19</a></li>
 </ul>
