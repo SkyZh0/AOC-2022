@@ -158,3 +158,9 @@ for i, line in enumerate(data,1):
     res = main(regex.findall(line))
     returnval += i * res
 print(res)
+
+#PART-2
+returnval = 1
+for line in data[:3]:
+    ret *= main(regex.findall(line))
+print(returnval)
