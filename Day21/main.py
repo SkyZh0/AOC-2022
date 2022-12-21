@@ -38,4 +38,3 @@ def value(name: str) ->int:
 print('PART-1: ',value('root'))
 
 
-#PART-2
