@@ -17,11 +17,6 @@ operators = {
     '*': operator.mul,
 }
 
-newOperators = {
-    **operators,
-    '/': lambda x, y: x//y
-}
-
 #PART-1
 opes: dict[str, int | tuple[typing.Callable[[int, int], int], str, str]] = {}
 for line in data:
