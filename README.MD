@@ -23,4 +23,5 @@
     <li><a href="Day18/">Day18 - Only PART-1</a></li>
     <li><a href="Day19/">Day19</a></li>
     <li><a href="Day20/">Day20</a></li>
+    <li><a href="Day21/">Day21</a></li>
 </ul>
