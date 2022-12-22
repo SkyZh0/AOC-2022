@@ -24,5 +24,5 @@
     <li><a href="Day19/">Day19</a></li>
     <li><a href="Day20/">Day20</a></li>
     <li><a href="Day21/">Day21</a></li>
-    <li><a href="Day22/">Day22</a></li>
+    <li><a href="Day22/">Day22 - Echec</a></li>
 </ul>
