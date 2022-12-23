@@ -16,8 +16,9 @@ for y, line in enumerate(maps.splitlines()):
     for x, char in enumerate(line):
         if char == '.#':
             coords[(x, y)] = char
-dx,dy = support.bounds(coords)
-x,y = min(x for (x,y) in coords if y == 0), dy.min 
+dy = [y for x,y in coords]
+x = min(x for (x,y) in coords if y == 0)
+y = min(dy) 
 direx = support.Direction4.RIGHT
 
 for elt in re.split('([RL])', dirc):
