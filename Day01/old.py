@@ -1,4 +1,4 @@
-inp = open('Day1/input.txt')
+inp = open('Day01/input.txt')
 tolist = inp.read().replace('\n',',').split(',')
 final, temp = [],[]
 for i in tolist:

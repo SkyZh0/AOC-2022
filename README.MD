@@ -3,7 +3,7 @@
 
 <h3>Days: </h3>
 <ul>
-    <li><a href="Day1/">Day1</a></li>
+    <li><a href="Day1/">Day01 - Optimized with OpenAI</a></li>
     <li><a href="Day2/">Day2</a></li>
     <li><a href="Day3/">Day3</a></li>
     <li><a href="Day4/">Day4</a></li>
