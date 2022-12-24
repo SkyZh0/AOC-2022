@@ -2,6 +2,7 @@
 from unittest import mock
 import support
 import collections
+from tqdm import tqdm
 
 #INPUT HANDLING
 with open('Day20/input.txt') as file:
@@ -28,7 +29,7 @@ OGnums = support.parse_numbers_split(data)
 OGnums = [i * 811589153 for i in OGnums]
 nums = collections.deque(list(enumerate(OGnums)))
 
-for _ in range(10):
+for _ in tqdm(range(10)):
     for i, number in enumerate(OGnums):
         id = nums.index((i, mock.ANY))
         nums.rotate(-id)
