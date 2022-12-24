@@ -1,6 +1,7 @@
 #IMPORT SECTION 
 import collections
 import support
+from tqdm import tqdm
 
 #INPUT HANDLING
 with open('Day23/input.txt') as file:
@@ -15,7 +16,7 @@ possibles = collections.deque([
     (support.Direction4.RIGHT, ((1, 1), (1, 0), (1, -1))),
 ])
 
-for _ in range(10):
+for _ in tqdm(range(10)):
     moves: dict[tuple[int,int], list[tuple[int,int]]]
     moves = collections.defaultdict(list)
     for x,y in coords:
