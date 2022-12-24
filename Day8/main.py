@@ -1,3 +1,6 @@
+#IMPORT SEC
+from tqdm import tqdm
+
 #INPUT-HANDLING
 with open("Day8/input.txt") as file:
     data = file.read().split('\n')
@@ -24,7 +27,7 @@ def exploreTreemap(indice):
     
 #PART-1
 number = 0
-for i in range(len(treemap)):
+for i in tqdm(range(len(treemap))):
     for j in range(len(treemap[i])):
         if exploreTreemap([i,j]):
             number += 1
@@ -63,7 +66,7 @@ def exploreTreemap2(indice):
 
 #PART-2
 viewdists = []
-for i in range(len(treemap)):
+for i in tqdm(range(len(treemap))):
     for j in range(len(treemap[i])):
         viewdists.append(exploreTreemap2([i,j]))
 print('PART-2: ',max(viewdists))#284648
