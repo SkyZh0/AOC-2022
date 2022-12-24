@@ -54,20 +54,20 @@ param = 4_000_000
 opt = Optimize()
 X = Int('X')
 Y = Int('Y')
-o.add(0 <= X)
-o.add(0 <= Y)
-o.add(X <= param)
-o.add(Y <= param)
+opt.add(0 <= X)
+opt.add(0 <= Y)
+opt.add(X <= param)
+opt.add(Y <= param)
 for line in data:
     match = regex.match(line)
     sensor = Sensor(
-        int(math[1]), 
-        int(math[2]), 
-        int(math[3]), 
-        int(math[4])    
+        int(match[1]), 
+        int(match[2]), 
+        int(match[3]), 
+        int(match[4])    
         )
-    o.add((absz(sensor.x - X) + absz(sensor.y - Y)) > sensor.distCalc)
-result = o.model()
+    opt.add((absz(sensor.x - X) + absz(sensor.y - Y)) > sensor.distCalc)
+result = opt.model()
 print(result[X].as_long() * param + result[Y].as_long())
 
 
