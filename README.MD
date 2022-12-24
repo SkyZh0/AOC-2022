@@ -4,14 +4,14 @@
 <h3>Days: </h3>
 <ul>
     <li><a href="Day01/">Day01 - Optimized with OpenAI</a></li>
-    <li><a href="Day02/">Day2</a></li>
-    <li><a href="Day03/">Day3</a></li>
-    <li><a href="Day04/">Day4</a></li>
-    <li><a href="Day05/">Day5</a></li>
-    <li><a href="Day06/">Day6 - Long live to copilot</a></li>
-    <li><a href="Day07/">Day7</a></li>
-    <li><a href="Day08/">Day8</a></li>
-    <li><a href="Day09/">Day9</a></li>
+    <li><a href="Day02/">Day02</a></li>
+    <li><a href="Day03/">Day03</a></li>
+    <li><a href="Day04/">Day04</a></li>
+    <li><a href="Day05/">Day05</a></li>
+    <li><a href="Day06/">Day06 - Long live to copilot</a></li>
+    <li><a href="Day07/">Day07</a></li>
+    <li><a href="Day08/">Day08</a></li>
+    <li><a href="Day09/">Day09</a></li>
     <li><a href="Day10/">Day10</a></li>
     <li><a href="Day11/">Day11</a></li>
     <li><a href="Day12/">Day12</a></li>
