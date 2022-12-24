@@ -1,5 +1,5 @@
 #INPUT HANDLING
-file = open("Day4/input.txt")
+file = open("Day04/input.txt")
 data = file.read().split('\n')
 
 spans = []

@@ -56,7 +56,7 @@ def sfilter(dsize):
 
 
 #PART-1
-file = open("Day7/input.txt")
+file = open("Day07/input.txt")
 lines = [l.strip() for l in file]
 
 disk = inputh(lines)

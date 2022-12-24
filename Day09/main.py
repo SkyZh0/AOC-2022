@@ -2,7 +2,7 @@
 import support
 
 #INPUT HANDLING
-with open("Day9/input.txt") as file:
+with open("Day09/input.txt") as file:
     moves = file.read().split('\n')
     moves = [elt.split(' ') for elt in moves]
     moves = [[elt[0], int(elt[1])] for elt in moves]

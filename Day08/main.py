@@ -2,7 +2,7 @@
 from tqdm import tqdm
 
 #INPUT-HANDLING
-with open("Day8/input.txt") as file:
+with open("Day08/input.txt") as file:
     data = file.read().split('\n')
 treemap = []
 for el in range(len(data)):

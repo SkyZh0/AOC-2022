@@ -1,5 +1,5 @@
 # Read input file
-with open("Day6/input.txt") as file:
+with open("Day06/input.txt") as file:
     data = file.read()
 
 # PART 1

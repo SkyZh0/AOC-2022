@@ -1,5 +1,5 @@
 #INPUT HANDLING
-file = open("Day3/input.txt")
+file = open("Day03/input.txt")
 data = file.read().split('\n')
 #PART-1
 bags = [[obj[0:((len(obj)-1)//2)+1], obj[((len(obj)-1)//2+1):len(data)-1]] for obj in data]

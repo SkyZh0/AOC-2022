@@ -15,7 +15,7 @@ crates = [
 
 crates2 = copy.deepcopy(crates)
 
-file = open("Day5/input.txt")
+file = open("Day05/input.txt")
 data = file.read().split('\n')
 moves = []
 for i in range(len(data)):

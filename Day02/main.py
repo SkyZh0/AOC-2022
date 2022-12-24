@@ -4,7 +4,7 @@
     C = SCISSORS = Z --> win
 """
 #INPUT HANDLING
-file = open('Day2/input.txt')
+file = open('Day02/input.txt')
 data = file.read().split('\n')
 data = [x.split(' ') for x in data]
 #PART-1
