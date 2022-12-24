@@ -2,6 +2,7 @@
 import functools
 import itertools
 import support
+from tqdm import tqdm
 
 #INPUT HANDLING
 with open('Day17/input.txt') as file:
@@ -96,7 +97,7 @@ coords = support.parse_coords_hash('#######')
 gas = itertools.cycle(data)
 maxh = 0
 
-for _ in range(2022):
+for _ in tqdm(range(2022)):
     piece = next(piecies)
     x = 2
     y = maxh + piece.height + 3
