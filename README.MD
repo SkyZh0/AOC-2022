@@ -27,4 +27,5 @@
     <li><a href="Day22/">Day22 - Echec</a></li>
     <li><a href="Day23/">Day23</a></li>
     <li><a href="Day24/">Day24 - S/O Copilot & OpenAI</a></li>
+    <li><a href="Day25/">Day25</a></li>
 </ul>
